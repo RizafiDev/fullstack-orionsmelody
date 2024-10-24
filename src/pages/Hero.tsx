@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import { useTheme } from "next-themes";
 
 import Particles from "@/components/ui/particles";
+import GradualSpacing from "@/components/ui/gradual-spacing";
 
 export function Hero() {
   const { theme } = useTheme();
@@ -15,9 +16,14 @@ export function Hero() {
 
   return (
     <div className="relative flex h-[500px] w-full flex-col items-center justify-center overflow-hidden rounded-lg bg-background ">
-      <span className="pointer-events-none whitespace-pre-wrap bg-gradient-to-b from-black to-gray-300/80 bg-clip-text text-center text-8xl font-semibold leading-none text-transparent dark:from-white dark:to-slate-900/10">
-        Particles
-      </span>
+      <GradualSpacing
+      className=" text-center text-4xl font-bold -tracking-widest  text-black dark:text-white md:text-7xl"
+      text="Distribute and promote"
+    />
+      <GradualSpacing
+      className="font-display text-center text-4xl font-bold -tracking-widest  text-black dark:text-white md:text-7xl"
+      text="your music globally"
+    />
       <Particles
         className="absolute inset-0"
         quantity={100}
