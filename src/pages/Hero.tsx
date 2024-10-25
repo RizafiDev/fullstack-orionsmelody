@@ -2,9 +2,12 @@
 
 import { useEffect, useState } from "react";
 import { useTheme } from "next-themes";
-
 import Particles from "@/components/ui/particles";
 import GradualSpacing from "@/components/ui/gradual-spacing";
+import BlurIn from "@/components/ui/blur-in";
+import { RainbowButton } from "@/components/ui/rainbow-button";
+import BlurFade from "@/components/ui/blur-fade";
+import Meteors from "@/components/ui/meteors";
 
 export function Hero() {
   const { theme } = useTheme();
@@ -15,20 +18,29 @@ export function Hero() {
   }, [theme]);
 
   return (
-    <div className="relative flex h-[500px] w-full flex-col items-center justify-center overflow-hidden rounded-lg bg-background ">
+    <div className="relative flex h-[660px] w-full flex-col items-center justify-center overflow-hidden bg-black px-72">
       <GradualSpacing
-      className=" text-center text-4xl font-bold -tracking-widest  text-black dark:text-white md:text-7xl"
+      className=" text-center text-4xl font-bold -tracking-widest  text-white  md:text-7xl"
       text="Distribute and promote"
     />
       <GradualSpacing
-      className="font-display text-center text-4xl font-bold -tracking-widest  text-black dark:text-white md:text-7xl"
+      className="font-display text-center text-4xl font-bold -tracking-widest  text-white  md:text-7xl"
       text="your music globally"
     />
+
+     <BlurIn
+      word="TikTok's all-in-one platform for artists and labels"
+      className="text-xs font-medium text-white "
+    />
+
+<BlurFade  inView>
+<RainbowButton>Get Started</RainbowButton></BlurFade>
+<Meteors number={40} />
       <Particles
         className="absolute inset-0"
         quantity={100}
         ease={80}
-        color={color}
+        color={"#FAFAFA"}
         refresh
       />
     </div>

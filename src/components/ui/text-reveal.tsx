@@ -19,7 +19,7 @@ export const TextRevealByWord: FC<TextRevealByWordProps> = ({
   const { scrollYProgress } = useScroll({
     target: targetRef,
   });
-  const words = text.split(" ");
+  const words = text.split("");
 
   return (
     <div ref={targetRef} className={cn("relative z-0 h-[200vh]", className)}>
