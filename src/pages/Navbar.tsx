@@ -5,12 +5,12 @@
 function Navbar(){
 
     return(
-        <div className="container relative w-full font-sans bg-black text-white flex items-center justify-between mx-auto px-72 py-5 ">
+        <div data-aos="fade-down" data-aos-easing="ease-in-out" data-aos-duration="1000" className="container relative w-full font-sans bg-black text-white flex items-center justify-between mx-auto px-72 py-5 ">
             <div className="brandmenu inline-flex items-center gap-12 ">
-                <a href="#" className="font-semibold text-2xl">NeptuneMusic</a>
+                <a href="#home" className="font-semibold text-2xl">NeptuneMusic</a>
                 <ul className="inline-flex items-center gap-5">
-                    <li className="font-base text-xs "><a href="#">Distribution</a></li>
-                    <li className="font-base text-xs "><a href="#">Promotion</a></li>
+                    <li className="font-base text-xs "><a href="#distribution">Distribution</a></li>
+                    <li className="font-base text-xs "><a href="#promotion">Promotion</a></li>
                     <li className="font-base text-xs "><a href="#">Analytics</a></li>
                     <li className="font-base text-xs "><a href="#">Earning</a></li>
                     <li className="font-base text-xs "><a href="#">Blog</a></li>
@@ -21,7 +21,7 @@ function Navbar(){
                 {/* <ModeToggle/> */}
                     <a className="text-xs font-medium">EN</a>
                     <a href="#" className="text-xs ">Log in</a>
-                    <a href="" className="text-xs  bg-black text-white py-2 px-4 rounded-full">Sign up</a>
+                    <a href="" className="text-xs  bg-white text-black py-2 px-4 rounded-full">Sign up</a>
             </div>
         </div>
     )

@@ -18,7 +18,7 @@ export function Hero() {
   }, [theme]);
 
   return (
-    <div className="relative flex h-[660px] w-full flex-col items-center justify-center overflow-hidden bg-black px-72">
+    <div className="relative flex h-[660px] w-full flex-col items-center justify-center overflow-hidden bg-black px-72" id="home">
       <GradualSpacing
       className=" text-center text-4xl font-bold -tracking-widest  text-white  md:text-7xl"
       text="Distribute and promote"
