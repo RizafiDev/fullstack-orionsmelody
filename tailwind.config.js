@@ -17,6 +17,9 @@ export default {
   			foreground: 'hsl(var(--foreground))',
 			custompink:'#fe2b54',
 			pagesbg:'#1c1c1c',
+			bluecard:'#326cf1',
+			graycard:'#383838',
+			greentext:'#aefd19',
   			card: {
   				DEFAULT: 'hsl(var(--card))',
   				foreground: 'hsl(var(--card-foreground))'
