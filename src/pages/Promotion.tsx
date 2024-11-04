@@ -1,5 +1,8 @@
 import NumberTicker from "@/components/ui/number-ticker";
-import capcut from '../assets/images/platform-logo/capcut.png'
+import capcut from '../assets/images/platform-logo/capcut.png';
+import album from '../assets/images/platform-logo/album.png';
+import preview from '../assets/images/platform-logo/preview.png';
+import { BorderBeam } from "@/components/ui/border-beam";
 
 function Promotion() {
   return (
@@ -17,7 +20,7 @@ function Promotion() {
           data-aos="fade-up"
           data-aos-easing="ease-in-out"
           data-aos-duration="1000"
-          className="h-[520px] card-overview bg-black w-full rounded-3xl p-16 inline-flex flex-col items-start justify-between"
+          className="h-[520px] relative card-overview bg-black w-full rounded-3xl p-16 inline-flex flex-col items-start justify-between"
         >
           {/*  */}
           <header className="w-full items-start flex justify-between">
@@ -41,6 +44,7 @@ function Promotion() {
     <p className="font-medium text-gray-400">creator <br />partnering with us</p>
             </div>
           </div>
+          <BorderBeam size={250} duration={12} delay={9} />
         </div>
         <div className="card-feat grid grid-cols-3 w-full space-x-4 h-[400px]">
           {/* card-1 */}
@@ -68,7 +72,7 @@ function Promotion() {
                 <h1 className=" font-bold text-3xl max-w-56">Get marketing support across DSPs</h1>
                 <p className=" font-medium text-xs max-w-56">Pitch your music for editorial playlists, enable pre-saves, and enjoy pre-release solutions across major streaming services.</p>
             </div>
-            <img src={capcut} alt="" className="w-24 border border-gray-400 rounded-2xl absolute bottom-8 right-8" />
+            <img src={album} alt="" className="w-28 absolute bottom-8 right-8" />
           </div>
           {/* card-1 */}
           <div
@@ -82,7 +86,7 @@ function Promotion() {
                 <h1 className=" font-bold text-3xl max-w-48">Receive expert guidance</h1>
                 <p className=" font-medium text-xs max-w-56">Amplify your growth with expert guidance* from our in-house team.</p>
             </div>
-            <img src={capcut} alt="" className="w-24 border border-gray-400 rounded-2xl absolute bottom-8 right-8" />
+            <img src={preview} alt="" className="w-36  absolute bottom-8 right-0" />
           </div>
         </div>
       </div>

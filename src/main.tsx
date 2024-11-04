@@ -6,7 +6,8 @@ import { ThemeProvider } from "@/components/theme-provider"
 import Featured from './pages/Featured';
 import AOS from 'aos';
 import 'aos/dist/aos.css'; // You can also use <link> for styles
-import Promotion from './pages/promotion';
+import Promotion from './pages/Promotion';
+import Analytics from './pages/Analytics';
 // ..
 AOS.init();
 
@@ -16,5 +17,6 @@ createRoot(document.getElementById('root')!).render(
     <Hero />
     <Featured/>
     <Promotion/>
+    <Analytics/>
   </ThemeProvider>
 );

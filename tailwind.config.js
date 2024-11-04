@@ -15,11 +15,11 @@ export default {
   		colors: {
   			background: 'hsl(var(--background))',
   			foreground: 'hsl(var(--foreground))',
-			custompink:'#fe2b54',
-			pagesbg:'#1c1c1c',
-			bluecard:'#326cf1',
-			graycard:'#383838',
-			greentext:'#aefd19',
+  			custompink: '#fe2b54',
+  			pagesbg: '#1c1c1c',
+  			bluecard: '#326cf1',
+  			graycard: '#383838',
+  			greentext: '#aefd19',
   			card: {
   				DEFAULT: 'hsl(var(--card))',
   				foreground: 'hsl(var(--card-foreground))'
@@ -66,7 +66,11 @@ export default {
   		},
   		animation: {
   			rainbow: 'rainbow var(--speed, 2s) infinite linear',
-  			meteor: 'meteor 5s linear infinite'
+  			meteor: 'meteor 5s linear infinite',
+  			marquee: 'marquee var(--duration) infinite linear',
+  			'marquee-vertical': 'marquee-vertical var(--duration) linear infinite',
+  			'border-beam': 'border-beam calc(var(--duration)*1s) infinite linear',
+  			ripple: 'ripple var(--duration,2s) ease calc(var(--i, 0)*.2s) infinite'
   		},
   		keyframes: {
   			rainbow: {
@@ -88,6 +92,35 @@ export default {
   				'100%': {
   					transform: 'rotate(215deg) translateX(-500px)',
   					opacity: '0'
+  				}
+  			},
+  			marquee: {
+  				from: {
+  					transform: 'translateX(0)'
+  				},
+  				to: {
+  					transform: 'translateX(calc(-100% - var(--gap)))'
+  				}
+  			},
+  			'marquee-vertical': {
+  				from: {
+  					transform: 'translateY(0)'
+  				},
+  				to: {
+  					transform: 'translateY(calc(-100% - var(--gap)))'
+  				}
+  			},
+  			'border-beam': {
+  				'100%': {
+  					'offset-distance': '100%'
+  				}
+  			},
+  			ripple: {
+  				'0%, 100%': {
+  					transform: 'translate(-50%, -50%) scale(1)'
+  				},
+  				'50%': {
+  					transform: 'translate(-50%, -50%) scale(0.9)'
   				}
   			}
   		}
