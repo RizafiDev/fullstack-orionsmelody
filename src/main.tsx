@@ -8,11 +8,13 @@ import AOS from 'aos';
 import 'aos/dist/aos.css'; // You can also use <link> for styles
 import Promotion from './pages/Promotion';
 import Analytics from './pages/Analytics';
+import Splash from './pages/Splash';
 // ..
 AOS.init();
 
 createRoot(document.getElementById('root')!).render(
   <ThemeProvider defaultTheme="dark" storageKey="vite-ui-theme">
+    {/* <Splash/> */}
     <Navbar />
     <Hero />
     <Featured/>
@@ -20,3 +22,5 @@ createRoot(document.getElementById('root')!).render(
     <Analytics/>
   </ThemeProvider>
 );
+
+
