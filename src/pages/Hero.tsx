@@ -18,23 +18,23 @@ export function Hero() {
   }, [theme]);
 
   return (
-    <div className="relative flex h-[660px] w-full flex-col items-center justify-center overflow-hidden bg-black px-72" id="home">
+    <div className="relative flex h-[500px] lg:h-[660px] w-full flex-col items-center justify-center overflow-hidden bg-black lg:px-72" id="home">
       <GradualSpacing
-      className=" text-center text-4xl font-bold -tracking-widest  text-white  md:text-7xl"
+      className="font-display text-center text-2xl font-semibold lg:font-bold -tracking-widest  text-white  lg:text-7xl"
       text="Distribute and promote"
     />
       <GradualSpacing
-      className="font-display text-center text-4xl font-bold -tracking-widest  text-white  md:text-7xl"
+      className="font-display text-center text-2xl font-semibold lg:font-bold -tracking-widest  text-white  lg:text-7xl"
       text="your music globally"
     />
 
      <BlurIn
       word="TikTok's all-in-one platform for artists and labels"
-      className="text-xs font-medium text-white "
+      className="text-xs font-medium text-white mt-2 lg:mt-0"
     />
 
 <BlurFade  inView>
-<RainbowButton>Get Started</RainbowButton></BlurFade>
+<RainbowButton className="mt-6 lg:mt-0 lg:text-lg text-sm">Get Started</RainbowButton></BlurFade>
 <Meteors number={40} />
       <Particles
         className="absolute inset-0"

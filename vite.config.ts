@@ -4,6 +4,10 @@ import { defineConfig } from "vite";
  
 export default defineConfig({
   plugins: [react()],
+  server: {
+    host: true,
+    port: 8000, // Sesuaikan port jika perlu
+  },
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),

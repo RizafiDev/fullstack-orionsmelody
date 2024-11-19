@@ -35,7 +35,7 @@ export default function GradualSpacing({
             transition={{ duration, delay: i * delayMultiple }}
             className={cn("drop-shadow-sm", className)}
           >
-            {char === " " ? <span className="inline-block w-4"></span> : char}
+            {char === " " ? <span className="inline-block w-1 lg:w-4"></span> : char}
           </motion.span>
         ))}
       </AnimatePresence>

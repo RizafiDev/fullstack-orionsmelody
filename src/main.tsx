@@ -9,16 +9,19 @@ import 'aos/dist/aos.css'; // You can also use <link> for styles
 import Promotion from './pages/Promotion';
 import Analytics from './pages/Analytics';
 import Splash from './pages/Splash';
+import 'remixicon/fonts/remixicon.css'
+import Velocity from './pages/Velocity';
 // ..
 AOS.init();
 
 createRoot(document.getElementById('root')!).render(
   <ThemeProvider defaultTheme="dark" storageKey="vite-ui-theme">
-    {/* <Splash/> */}
+    <Splash/>
     <Navbar />
     <Hero />
     <Featured/>
     <Promotion/>
+    <Velocity/>
     <Analytics/>
   </ThemeProvider>
 );

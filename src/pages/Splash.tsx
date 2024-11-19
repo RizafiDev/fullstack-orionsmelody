@@ -10,8 +10,15 @@ function Splash() {
       { opacity:1, },
       {
         opacity:0,
-        duration: 5,
-        delay: 3,
+        duration: 4,
+        delay: 2,
+        onComplete: () => {
+          // Menghapus z-index setelah animasi selesai
+          const splash = document.getElementById("splash");
+          if (splash) {
+            splash.style.zIndex = "-1";
+          }
+        },
       }
     );
 
