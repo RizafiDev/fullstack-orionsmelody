@@ -75,7 +75,7 @@ export function VelocityScroll({
     const x = useTransform(baseX, (v) => `${wrap(-100 / repetitions, 0, v)}%`);
 
     const directionFactor = React.useRef<number>(1);
-    useAnimationFrame((t, delta) => {
+    useAnimationFrame((_, delta) => {
       let moveBy = directionFactor.current * baseVelocity * (delta / 1000);
 
       if (velocityFactor.get() < 0) {
@@ -97,7 +97,8 @@ export function VelocityScroll({
         <motion.div className={cn("inline-block", className)} style={{ x }}>
           {Array.from({ length: repetitions }).map((_, i) => (
             <span key={i} ref={i === 0 ? textRef : null}>
-              {children}{""}
+              {children}
+              {""}
             </span>
           ))}
         </motion.div>
