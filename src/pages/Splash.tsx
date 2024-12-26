@@ -48,7 +48,7 @@ function Splash() {
   return (
     <div
       id="splash"
-      className="splash absolute z-50 w-full h-screen bg-black flex items-center justify-center"
+      className="splash absolute z-50 w-full h-screen bg-black flex items-center justify-center overflow-hidden"
     >
       <div className="brand flex items-center justify-center flex-col gap-3">
         <img

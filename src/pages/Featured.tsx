@@ -11,9 +11,9 @@ import dzImg from "../assets/images/platform-logo/deezer.png";
 function Featured() {
   return (
     <div
-  className="container relative bg-[#f3f3f1] py-11 lg:py-24 mx-auto lg:px-72 flex flex-col items-center gap-8" // Kurangi gap dari 12 ke 8
-  id="distribution"
->
+      className="container relative bg-[#f3f3f1] py-11 lg:py-24 mx-auto lg:px-72 flex flex-col items-center gap-8 overflow-hidden" // Kurangi gap dari 12 ke 8
+      id="distribution"
+    >
       <div
         data-aos="fade-down"
         data-aos-easing="ease-in-out"
@@ -23,14 +23,16 @@ function Featured() {
       </div>
 
       {/* card */}
-      <div className="card-collection w-full grid grid-rows-2 gap-6 px-4 lg:px-0"> {/* Sesuaikan gap */}
-    {/* card 1 */}
-    <div
-      data-aos="flip-left"
-      data-aos-easing="ease-in-out"
-      data-aos-duration="1000"
-      className="card-overview h-auto bg-white w-full rounded-3xl px-10  lg:py-10 inline-flex lg:flex-row flex-col lg:items-center items-start justify-center gap-3 lg:gap-36"
-    >
+      <div className="card-collection w-full grid grid-rows-2 gap-6 px-4 lg:px-0">
+        {" "}
+        {/* Sesuaikan gap */}
+        {/* card 1 */}
+        <div
+          data-aos="flip-left"
+          data-aos-easing="ease-in-out"
+          data-aos-duration="1000"
+          className="card-overview h-auto bg-white w-full rounded-3xl px-10  lg:py-10 inline-flex lg:flex-row flex-col lg:items-center items-start justify-center gap-3 lg:gap-36"
+        >
           <img
             src={cardImg}
             alt=""
@@ -48,16 +50,17 @@ function Featured() {
             </p>
           </div>
         </div>
-
         {/* card freatt */}
-        <div className="card-feat grid grid-cols-1 lg:grid-cols-2 w-full gap-4"> {/* Ganti space-y dan space-x dengan gap */}
-      {/* card 1 */}
-      <div
-        data-aos="fade-right"
-        data-aos-easing="ease-in-out"
-        data-aos-duration="1000"
-        className="card-1 h-auto lg:h-[500px] bg-white rounded-3xl relative overflow-hidden flex items-center justify-center p-10" // Kurangi height dan tambah padding
-      >
+        <div className="card-feat grid grid-cols-1 lg:grid-cols-2 w-full gap-4">
+          {" "}
+          {/* Ganti space-y dan space-x dengan gap */}
+          {/* card 1 */}
+          <div
+            data-aos="fade-right"
+            data-aos-easing="ease-in-out"
+            data-aos-duration="1000"
+            className="card-1 h-auto lg:h-[500px] bg-white rounded-3xl relative overflow-hidden flex items-center justify-center p-10" // Kurangi height dan tambah padding
+          >
             <div className="icons">
               {/* top image */}
               <img
@@ -115,14 +118,13 @@ function Featured() {
               </p>
             </article>
           </div>
-
           {/* card 2 */}
           <div
-        data-aos="fade-left"
-        data-aos-easing="ease-in-out"
-        data-aos-duration="1000"
-        className="card-2 h-auto lg:h-[500px] bg-custompink rounded-3xl relative flex items-center justify-center p-10" // Kurangi height dan tambah padding
-      >
+            data-aos="fade-left"
+            data-aos-easing="ease-in-out"
+            data-aos-duration="1000"
+            className="card-2 h-auto lg:h-[500px] bg-custompink rounded-3xl relative flex items-center justify-center p-10" // Kurangi height dan tambah padding
+          >
             <div className="circle w-[460px] h-[460px]  rounded-full absolute bg-white opacity-20"></div>
             <article className="flex flex-col items-center justify-center max-w-80 gap-3 z-20 text-white">
               <h1 className="font-bold text-4xl flex text-center flex-col">

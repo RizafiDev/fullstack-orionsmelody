@@ -10,7 +10,6 @@ use Illuminate\Http\Request;
 
 class DetailHandler extends Handlers
 {
-    public static bool $public = true;
     public static string | null $uri = '/{id}';
     public static string | null $resource = ReleaseResource::class;
 

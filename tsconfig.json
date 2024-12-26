@@ -5,8 +5,6 @@
     { "path": "./tsconfig.node.json" }
   ],
   "compilerOptions": {
-    "moduleResolution": "node",
-    "types": ["swiper"],
     "baseUrl": ".",
     "paths": {
       "@/*": ["./src/*"]

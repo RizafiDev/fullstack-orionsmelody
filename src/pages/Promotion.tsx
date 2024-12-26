@@ -7,10 +7,14 @@ import { BorderBeam } from "@/components/ui/border-beam";
 function Promotion() {
   return (
     <div
-      className="container relative bg-pagesbg py-10 lg:py-24 mx-auto px-4 lg:px-72 flex flex-col justify-center items-center gap-6 lg:gap-12"
+      className="container relative bg-pagesbg py-10 lg:py-24 mx-auto px-4 lg:px-72 flex flex-col justify-center items-center gap-6 lg:gap-12 overflow-hidden"
       id="promotion"
     >
-      <h1 className="font-bold text-3xl lg:text-5xl text-white text-center leading-tight">
+      <h1
+        data-aos="fade-down"
+        data-aos-easing="ease-in-out"
+        className="font-bold text-3xl lg:text-5xl text-white text-center leading-tight"
+      >
         Amplify your music
         <br />
         with TikTok

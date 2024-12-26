@@ -3,13 +3,10 @@ import react from "@vitejs/plugin-react";
 import { defineConfig } from "vite";
 
 export default defineConfig({
-  build: {
-    outDir: "build", // Ubah output folder ke 'build'
-  },
   plugins: [react()],
   server: {
-    host: true,
-    port: 8000, // Sesuaikan port jika perlu
+    host: "127.0.0.1",
+    port: 9000, // Sesuaikan port jika perlu
   },
   resolve: {
     alias: {

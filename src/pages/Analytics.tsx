@@ -163,10 +163,14 @@ const ReviewCard = ({
 function Analytics() {
   return (
     <div
-      className="container relative bg-[#f3f3f1] py-10 lg:py-24 mx-auto px-4 lg:px-72 flex flex-col justify-center items-center gap-6 lg:gap-12"
-      id="promotion"
+      className="container relative bg-[#f3f3f1] py-10 lg:py-24 mx-auto px-4 lg:px-72 flex flex-col justify-center items-center gap-6 lg:gap-12 overflow-hidden"
+      id="feature"
     >
-      <header className="flex flex-col items-center gap-4">
+      <header
+        data-aos="fade-down"
+        data-aos-easing="ease-in-out"
+        className="flex flex-col items-center gap-4"
+      >
         <h1 className="font-bold text-3xl lg:text-5xl text-black text-center leading-tight">
           Use Profesional <br />
           Tools from Us!
@@ -177,7 +181,12 @@ function Analytics() {
       </header>
       <div className="card-container w-full flex flex-col gap-4 lg:gap-3 lg:flex-row lg:h-[550px]">
         {/* Card 1 */}
-        <div className="card-1 w-full lg:w-2/5 bg-custompink rounded-3xl h-64 lg:h-full flex items-center justify-center p-4">
+        <div
+          data-aos="fade-right"
+          data-aos-easing="ease-in-out"
+          data-aos-delay="500"
+          className="card-1 w-full lg:w-2/5 bg-custompink text-white rounded-3xl h-64 lg:h-full flex items-center justify-center p-4"
+        >
           <div className="content flex flex-col items-center justify-center gap-4 text-center">
             <img src={logo} alt="logo" className="w-24 h-24 lg:w-32 lg:h-32" />
             <h1 className="font-semibold text-xl lg:text-2xl">
@@ -192,7 +201,12 @@ function Analytics() {
         {/* Card 2 */}
         <div className="card-2 w-full lg:w-3/5 flex flex-col gap-4 lg:gap-3">
           {/* Sub 1 */}
-          <div className="sub-1 h-52 lg:h-1/2 bg-white rounded-3xl overflow-hidden text-black p-3">
+          <div
+            data-aos="fade-up"
+            data-aos-easing="ease-in-out"
+            data-aos-delay="1000"
+            className="sub-1 h-52 lg:h-1/2 bg-white rounded-3xl overflow-hidden text-black p-3"
+          >
             <Marquee pauseOnHover className="[--duration:15s]">
               {firstRow.map((review) => (
                 <ReviewCard key={review.username} {...review} />
@@ -206,7 +220,12 @@ function Analytics() {
           </div>
 
           {/* Sub 2 */}
-          <div className="sub-2 h-52 lg:h-1/2 bg-white rounded-3xl overflow-hidden p-4 text-black">
+          <div
+            data-aos="fade-up"
+            data-aos-easing="ease-in-out"
+            data-aos-delay="1000"
+            className="sub-2 h-52 lg:h-1/2 bg-white rounded-3xl overflow-hidden p-4 text-black"
+          >
             <AnimatedList>
               {notifications.map((item, idx) => (
                 <Notification {...item} key={idx} />

@@ -1,6 +1,14 @@
 "use client";
 import { useState } from "react";
 import logo from "../assets/images/logo.png";
+import {
+  Select,
+  SelectContent,
+  SelectGroup,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
 
 function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -14,7 +22,7 @@ function Navbar() {
       data-aos="fade-down"
       data-aos-easing="ease-in-out"
       data-aos-duration="1000"
-      className="container relative w-full font-sans bg-black text-white flex items-center justify-between mx-auto px-7 lg:px-72 py-5 "
+      className="container relative w-full font-sans bg-black text-white flex items-center justify-between mx-auto px-7 lg:px-72 py-5 z-50"
     >
       <div className="brandmenu inline-flex items-center gap-12 ">
         <a href="#home" className="font-semibold text-xl lg:text-2xl">
@@ -31,25 +39,42 @@ function Navbar() {
             <a href="#feature">Feature</a>
           </li>
           <li className="font-base text-xs ">
-            <a href="#">Earning</a>
-          </li>
-          <li className="font-base text-xs ">
-            <a href="#">Blog</a>
-          </li>
-          <li className="font-base text-xs ">
-            <a href="#">Help</a>
+            <a href="#release">Releases</a>
           </li>
         </ul>
       </div>
-      <div
-        id="humbergerButton"
-        className="humberger cursor-pointer lg:hidden"
-        onClick={toggleMenu}
-      >
-        <i className="ri-menu-4-fill ri-lg"></i>
+      <div className="operator lg:hidden flex gap-1 items-center">
+        <Select>
+          <SelectTrigger className="w-fit border-none">
+            <SelectValue placeholder="EN" />
+          </SelectTrigger>
+          <SelectContent>
+            <SelectGroup>
+              <SelectItem value="english">EN</SelectItem>
+              <SelectItem value="bahasaindonesia">ID</SelectItem>
+            </SelectGroup>
+          </SelectContent>
+        </Select>
+        <div
+          id="humbergerButton"
+          className="humberger cursor-pointer "
+          onClick={toggleMenu}
+        >
+          <i className="ri-menu-4-fill ri-lg"></i>
+        </div>
       </div>
       <div className="action language lg:flex hidden justify-center gap-5 items-center">
-        <a className="text-xs font-medium">EN</a>
+        <Select>
+          <SelectTrigger className="w-fit border-none">
+            <SelectValue placeholder="EN" />
+          </SelectTrigger>
+          <SelectContent>
+            <SelectGroup>
+              <SelectItem value="english">EN</SelectItem>
+              <SelectItem value="bahasaindonesia">ID</SelectItem>
+            </SelectGroup>
+          </SelectContent>
+        </Select>
         <a href="https://firmansyah-dev.tech/admin/login" className="text-xs ">
           Log in
         </a>
@@ -74,16 +99,10 @@ function Navbar() {
             <a href="#promotion">Promotion</a>
           </li>
           <li className="font-base text-xs ">
-            <a href="#">Analytics</a>
+            <a href="#feature">Feature</a>
           </li>
           <li className="font-base text-xs ">
-            <a href="#">Earning</a>
-          </li>
-          <li className="font-base text-xs ">
-            <a href="#">Blog</a>
-          </li>
-          <li className="font-base text-xs ">
-            <a href="#">Help</a>
+            <a href="#release">Releases</a>
           </li>
           <li className="flex items-center justify-between gap-4">
             <a

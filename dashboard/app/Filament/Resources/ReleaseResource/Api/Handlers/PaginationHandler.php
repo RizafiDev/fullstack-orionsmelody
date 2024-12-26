@@ -14,19 +14,23 @@ class PaginationHandler extends Handlers {
 
 
 
-    public function handler()
+    public function handler(): mixed
     {
         $query = static::getEloquentQuery();
         $model = static::getModel();
-
-        $query = QueryBuilder::for($query)
-        ->allowedFields($this->getAllowedFields() ?? [])
-        ->allowedSorts($this->getAllowedSorts() ?? [])
-        ->allowedFilters($this->getAllowedFilters() ?? [])
-        ->allowedIncludes($this->getAllowedIncludes() ?? [])
-        ->paginate(request()->query('per_page'))
-        ->appends(request()->query());
-
+    
+        $query = QueryBuilder::for(subject: $query)
+            ->allowedFields(fields: $this->getAllowedFields() ?? [])
+            ->allowedSorts(sorts: $this->getAllowedSorts() ?? [])
+            ->allowedFilters(filters: $this->getAllowedFilters() ?? [])
+            ->allowedIncludes(includes: $this->getAllowedIncludes() ?? [])
+            ->where('status', 'approved') // Filter hanya data dengan status approved
+            ->orderBy('created_at', 'desc') // Urutkan berdasarkan created_at descending
+            ->limit(5) // Batasi hanya 5 data terbaru
+            ->paginate(perPage: request()->query(key: 'per_page') ?? 10)
+            ->appends(key: request()->query());
+    
         return static::getApiTransformer()::collection($query);
     }
+    
 }
